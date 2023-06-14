@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REGISTER</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mt-5">REGISTER</h2>
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <label  for="inputName" class="form-label">Nama:</label>
+            <input type="text"
+            name="inputName"
+            id="inputName"
+            class="form-control"
+            required placeholder="Masukkan nama">
+          </div>
+          <div class="form-group">
+            <label  for="inputEmail" class="form-label">Email:</label>
+            <input  type="email"
+            name="inputEmail"
+            id="inputEmail"
+            class="form-control"
+            required placeholder="Masukkan email">
+          </div>
+          <div class="form-group">
+            <label  for="inputPassword" class="form-label">Password:</label>
+            <input 
+            type="password"
+            name="inputPassword"
+            id="inputPassword"
+            class="form-control"
+            required placeholder="Masukkan password">
+          </div>
+          <button class="btn btn-primary">DAFTAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

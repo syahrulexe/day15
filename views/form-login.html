@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  {{if .FlashMessage}} {{if .FlashStatus}}
+  <div class="alert alert-success alert-dismissable fade show" role="alert">
+    <strong>{{.FlashMessage}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {{else}}
+  <div class="alert alert-danger alert-dismissable fade show" role="alert">
+    <strong>{{.FlashMessage}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {{end}} {{end}}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mt-5">Login</h2>
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="inputEmail" class="form-label">Email:</label>
+            <input type="email"
+            name="inputEmail"
+            id="inputEmail"
+            class="form-control"
+            required placeholder="Masukkan email">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="form-label">Password:</label>
+            <input type="password"
+            name="inputPassword"
+            id="inputPassword"
+            class="form-control"
+            required placeholder="Masukkan password">
+          </div>
+          <button class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
